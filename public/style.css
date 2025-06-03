@@ -1,0 +1,539 @@
+/*all html pages*/
+html {
+  color: #590a29;
+  font-family: sans-serif;
+  background-color: #f2d996;
+}
+
+/*under html*/
+html::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 0 1000px rgba(132, 125, 125, 0.2);
+  background-image: url(images/background.jpg);
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+  z-index: -1;
+}
+
+/*the header part of the page*/
+header {
+  padding: 15px;
+  height: 240px;
+  margin-top: -10px;
+  margin-right: -10px;
+  margin-left: -10px;
+  margin-bottom: 150px;
+  background-color: #f0d17b;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.516);
+}
+
+/*the logo image in the header*/
+header img {
+  padding-top: 20px;
+  width: 260px;
+  height: 260px;
+}
+
+/*navigation menu*/
+nav {
+  background-color: #f0d17b;
+  height: 60px;
+  margin-top: -10px;
+  margin-right: -10px;
+  margin-left: -10px;
+  margin-bottom: 100px;
+  border-bottom: 5px solid #590a29;
+  overflow: hidden;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 10px; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.516);
+  z-index: 1;
+}
+
+/*the list used for nav menu*/
+ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0px;
+  margin-top: -10px;
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+/*the list items as links*/
+li a {
+  display: inline-block;
+  width: 300px;
+  height: 40px;
+  color: #590a29;
+  font-style: italic;
+  font-size: 25px;
+  padding-top: 20px;
+  padding-bottom: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #f0d17b;
+}
+
+/*the links during mouse hover*/
+li a:hover {
+  background-color: #eec34f;
+  height: 60px;
+}
+
+/*the article*/
+article {
+  text-align: center;
+}
+
+/*the welcome part of index.html*/
+#welcome_div {
+  background-image: linear-gradient(#f0c03dd1, #efcb68d1);
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+/*the welcome part of the article and the wrappers for the other pages*/
+#welcome_div,
+#wrapper_div {
+  font-size: 30px;
+  padding: 30px;
+  padding-top: 10px;
+  margin-bottom: 110px;
+}
+
+/*the headings*/
+h1 {
+  font-size: 60px;
+  font-style: italic;
+}
+
+/*the subheadings*/
+h2 {
+  font-size: 40px;
+  font-style: italic;
+}
+
+/*the sub-sub-headings*/
+h3 {
+  font-size: 30px;
+  font-style: italic;
+}
+
+/*the images of cakes*/
+.cakes {
+  width: 320px;
+  height: 312px;
+  object-fit: cover;
+}
+
+/*the cake divs in the page*/
+.cake_divs {
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+  padding: 10px;
+  margin: 100px 100px;
+  width: 450px;
+  height: 700px;
+  max-width: 450px;
+  max-height: 700px;
+  min-width: 450px;
+  min-height: 700px;
+  background-color: #f0d17b;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.516);
+  border-bottom: 5px solid#590a29;
+  border-right: 5px solid#590a29;
+}
+
+/*cake divs while mouse hover*/
+.cake_divs:hover {
+  transform: translateY(-15px);
+  z-index: 0;
+}
+
+/*the paraghraphs for the cakes*/
+.cake_divs p {
+  font-size: 18px;
+  text-align: left;
+}
+
+/*section for the cakes*/
+#cakes_section {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f2d996;
+  margin-left: -10px;
+  margin-right: -10px;
+  padding: 100px 50px;
+}
+
+/*css for the strong elements in the site*/
+strong {
+  font-size: 30px;
+}
+
+/*css for the strong elements in the footer*/
+#footer strong {
+  font-size: 20px;
+}
+
+/*css for the footer part of the page*/
+#footer {
+  background-color: #f0d17b;
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-bottom: -10px;
+  padding: 30px;
+}
+
+/*styling of the address block*/
+address {
+  display: block;
+  font-size: 17px;
+  color: #590a2ab6;
+  width: 600px;
+  height: 70px;
+}
+
+/*css for the link*/
+#mail {
+  color: #590a29;
+}
+
+/*css for the link during mouse hovering*/
+#mail:hover {
+  text-decoration: none;
+}
+
+/*the divs for the cakes*/
+#wrapper_div {
+  margin: 200px 80px;
+  padding: 30px;
+  padding-bottom: 100px;
+  display: flex;
+  width: 2000px;
+  height: 700px;
+  background-color: #f2d996;
+  text-align: left;
+  border-left: 25px solid #590a29;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.516);
+}
+
+/*the images of cake pieces*/
+.pieces {
+  width: 720px;
+  height: 600px;
+  padding-top: 15px;
+  object-fit: cover;
+}
+
+/*the description divs*/
+.description {
+  font-size: 22px;
+  padding-top: 115px;
+  padding-left: 40px;
+}
+
+/*the javaScript forms union*/
+#forms {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  font-size: 25px;
+  background-image: url(images/istock.jpg);
+  background-repeat: repeat;
+  box-shadow: inset 0 0 0 1000px #f6d16c84;
+}
+
+/*the javaScript forms*/
+form {
+  border-radius: 10px;
+  text-align: left;
+  padding: 10px 60px 80px 60px;
+  margin: 30px 250px;
+  width: 500px;
+  height: 350px;
+  background-image: linear-gradient(#f0c03dd1, #efcb68d1);
+  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.203);
+}
+
+/*heading in forms*/
+form h3 {
+  text-align: center;
+}
+
+/*every input box*/
+input {
+  font-size: 20px;
+  width: 400px;
+  height: 20px;
+  background-color: #ffde59;
+  border-radius: 3px;
+}
+
+/*every button*/
+button {
+  width: 130px;
+  height: 50px;
+  background-color: #590a29;
+  font-family: sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+}
+
+/*every button clicked*/
+button:focus {
+  background-color: #310718;
+  color: rgb(255, 255, 255);
+}
+
+/*every button hovered*/
+button:hover {
+  background-color: #310718;
+  color: rgb(255, 255, 255);
+}
+
+/*every textarea*/
+textarea {
+  font-size: 20px;
+  width: 400px;
+  height: 90px;
+  background-color: #ffde59;
+  overflow: scroll;
+  scrollbar-color: #590a29 #cc7c14;
+  scrollbar-width: thin;
+  border-radius: 3px;
+}
+
+/*the revues section, union*/
+#revues {
+  background-color: #f2d996;
+  margin-left: -10px;
+  margin-right: -10px;
+  padding: 100px 50px;
+  display: block;
+  text-align: left;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+/*every revu div*/
+.rev {
+  transition: transform 0.3s ease-in-out;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+  width: 1000px;
+  height: 170px;
+  padding: 20px;
+  margin: 30px 80px;
+  background-color: #f0d17b;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.516);
+  border-left: 25px solid #590a29;
+}
+
+.rev:hover {
+  transform: translateX(30px);
+  z-index: 0;
+}
+
+/*the first revue*/
+.rev:first-child {
+  margin-top: -10px;
+}
+
+/*every image in revu*/
+#people {
+  margin: 0px 80px;
+  margin-top: -10px;
+  width: 220px;
+  height: 210px;
+}
+
+/*login and register buttons div in the index page*/
+.login_register {
+  display: flex;
+  margin-left: 900px;
+}
+
+/*login and register buttons in the index page*/
+.login_register button {
+  margin: 30px;
+}
+
+/*login and register forms*/
+#login_form,
+#register_form {
+  margin: 300px;
+  margin-left: 800px;
+}
+
+/*login and register forms inputs*/
+#login_form input,
+#register_form input {
+  margin: 10px;
+}
+
+/*login and register forms buttons*/
+#login_form button,
+#register_form button {
+  margin: 10px;
+}
+
+/*the logout button*/
+#logout {
+  margin-left: 120px;
+}
+
+/*admin page*/
+#admin {
+  margin: 0px;
+}
+
+/*products container in admin page*/
+.cakes-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*every product in admin page*/
+.cakes-container div {
+  background-color: unset;
+  box-shadow: unset;
+  border-bottom: unset;
+  border-right: unset;
+}
+
+/*every product in admin page while mouse hovering*/
+.cakes-container div:hover {
+  transform: unset;
+  z-index: unset;
+}
+
+/*admin html page under background*/
+#admin::before {
+  box-shadow: unset;
+  background-image: unset;
+  filter: unset;
+  background-color: #d6bc76;
+}
+
+/*purchases section in admin page*/
+#purchases {
+  display: inline;
+  float: right;
+  background-color: #f0d17b;
+  width: 600px;
+}
+
+/*subheadings in admin page*/
+#admin h2 {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+/*the first two sections in admin page*/
+#admin #cakes_section,
+#admin #purchases {
+  padding: 10px;
+}
+
+/*h1 in admin page*/
+#admin h1 {
+  margin-left: 900px;
+}
+
+/*union of first two sections*/
+#first_two_sections {
+  margin: -10px;
+}
+
+/*div for the image and form while hover*/
+.cake-image-wrapper {
+  position: relative;
+}
+
+/*the image in this div*/
+.cake-image-wrapper img {
+  transition: opacity 0.3s ease;
+}
+
+/*the image while hover*/
+.cake-image-wrapper:hover img {
+  opacity: 0.3;
+  filter: brightness(1.3);
+}
+
+/*the form for deletion*/
+.delete-form {
+  position: absolute;
+  background-image: unset;
+  background-color: white;
+  width: 100px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+/*while hover form is shown like a block*/
+.cake-image-wrapper:hover .delete-form {
+  display: block;
+}
+
+/*the button for deletion*/
+#delete-btn {
+  margin-right: 50px;
+  margin-top: 40px;
+  margin-left: -10px;
+  margin-bottom: 40px;
+}
+
+/*the form in admin page for adding new product and edit form*/
+#add_product,
+#edit_product {
+  height: 800px;
+  margin-left: 100px;
+  padding-left: 100px;
+}
+
+/*the labels in these forms*/
+#add_product input,
+#edit_product input {
+  margin: 10px;
+}
+
+/*the button in these forms*/
+#add_product button,
+#edit_product button {
+  margin-top: 30px;
+}
+
+/*the edit button form in admin page*/
+#edit {
+  all: unset;
+}
+
+/*edit html page under background*/
+#edit_page::before {
+  box-shadow: unset;
+  background-image: unset;
+  filter: unset;
+  background-color: #d6bc76;
+}

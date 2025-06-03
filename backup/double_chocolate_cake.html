@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="bg">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="../public/style.css" />
+    <title>Шоколадов рай</title>
+    <script defer src="../public/script.js"></script>
+  </head>
+  <body>
+    <header>
+      <img src="images/honey_transparent.gif" />
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Начало</a></li>
+        <li><a href="#wrapper_div">Описание</a></li>
+        <li><a href="#revues">Ревюта</a></li>
+        <li><a href="#forms">Поръчка и ревю</a></li>
+        <li><a href="#footer">Контакти</a></li>
+      </ul>
+    </nav>
+    <main>
+      <article>
+        <section>
+          <div id="wrapper_div">
+            <div class="cake">
+              <h2>Шоколадов рай</h2>
+              <p>
+                <img
+                  class="pieces"
+                  src="images/double_chocolate.jpg"
+                  alt="Изображение на шоколадова торта"
+                />
+              </p>
+            </div>
+            <div class="description">
+              <p><strong>Цена:</strong> 60.00 лв.</p>
+              <p>
+                <strong>Кратко описание:</strong><br /><br />
+                Торта <q>Шоколадов рай</q> е богат десерт с нежни шоколадови
+                блатове и крем, изпълнен с наситен<br />
+                вкус – перфектно удоволствие за истинските любители на шоколада!
+              </p>
+              <p>
+                <strong>Пълно описание:</strong><br /><br />
+                Двойната шоколадова торта е истинско удоволствие за любителите
+                на шоколада. Тя се състои от<br />
+                три богати, влажни и плътни шоколадови блата, които са пропити с
+                дълбок какаов вкус. Между<br />
+                слоевете има гладък и кремообразен шоколадов ганаш или шоколадов
+                маслен крем, който<br />
+                допълнително засилва интензивността на вкуса.
+              </p>
+              <p>
+                Тортата е покрита с дебел слой нежен шоколадов крем, който има
+                кадифена текстура и лъскав<br />
+                завършек. Вкусът е перфектен баланс между сладост и наситен
+                шоколадов аромат, без да бъде<br />
+                прекалено тежък.
+              </p>
+              <p>
+                Обикновено тази торта се сервира с чаша студено мляко или кафе,
+                което подчертава вкусовете ѝ.<br />
+                Подходяща е за всякакви поводи – от рождени дни до празнични
+                събирания, като гарантира<br />
+                незабравимо шоколадово изживяване!
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="revues">
+          <img src="images/image_no_bg.png" id="people" />
+          <div id="revues_div">
+            <div class="rev">
+              <p>
+                Мечтата на всеки шокохолик! Вкусът е дълбок, интензивен и не
+                прекалено сладък. Комбинацията от блатовете и крема е просто
+                идеална. Доставката беше навреме, а тортата пристигна в
+                перфектно състояние. Определено препоръчвам!
+              </p>
+            </div>
+            <div class="rev">
+              <p>
+                Абсолютно съвършенство за любителите на шоколада! Блатовете са
+                изключително влажни, а кремът е кадифен и с наситен вкус на
+                тъмен шоколад. Опитвала съм много шоколадови торти, но тази
+                определено е една от най-добрите. Ще поръчам отново!
+              </p>
+            </div>
+            <div class="rev">
+              <p>
+                Тортата беше много вкусна, с богат шоколадов вкус и перфектна
+                текстура. Единствената причина да давам 4 звезди вместо 5 е, че
+                кремът беше малко по-тежък, отколкото очаквах. Въпреки това,
+                всички вкъщи я обожаваха и изчезна за нула време!
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="forms">
+          <form action="" method="get" id="purchase_form">
+            <h3>Закупуване</h3>
+            <p>
+              <label for="name">Име (задължително):</label>
+              <input type="text" name="name" id="name" required />
+            </p>
+            <p>
+              <label for="address">Адрес (задължително):</label>
+              <input type="text" name="address" id="address" required />
+              <label for="quantity">Количество:</label><br />
+              <input
+                type="number"
+                id="quantity"
+                name="quantity"
+                min="1"
+                value="1"
+                required
+              /><br />
+            </p>
+            <p>
+              <button id="order">Поръчка</button>
+            </p>
+          </form>
+
+          <form action="" method="get" id="review_form">
+            <h3>Изпращане на ревю</h3>
+            <p>
+              <label for="comments">Коментар:</label>
+              <textarea
+                id="comments"
+                name="comments"
+                rows="5"
+                cols="33"
+              ></textarea>
+            </p>
+            <p>
+              <button id="send">Изпращане</button>
+            </p>
+          </form>
+        </section>
+      </article>
+    </main>
+
+    <footer id="footer">
+      <address>
+        <strong>Имейл:</strong>
+        <a href="mailto:honeycocoa@abv.bg" id="mail">honeycocoa@abv.bg</a><br />
+        <strong>Телефон:</strong> 0885478912<br />
+        <strong>Адрес:</strong> ул. Граф Игнатиев 25, 1000 София, България<br />
+      </address>
+    </footer>
+  </body>
+</html>

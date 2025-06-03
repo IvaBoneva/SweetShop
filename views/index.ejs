@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="bg" class="home">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Начало</title>
+  </head>
+  <body>
+    <header>
+      <img src="images/honey_transparent.gif" />
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#">Начало</a></li>
+        <li><a href="#cakes_section">Нашите предложения</a></li>
+        <li><a href="#footer">Контакти</a></li>
+        <% if (currentUser && currentUser.isAdmin) { %>
+        <li><a href="/admin">Админ панел</a></li>
+        <% } %>
+      </ul>
+    </nav>
+
+    <main>
+      <article>
+        <div id="welcome_div">
+          <h1>
+            <% if (currentUser) { %> Добре дошли, <%= currentUser.username %>, в
+            дома на вкусните торти! <% } else { %> Добре дошли в дома на
+            вкусните торти! <% } %>
+          </h1>
+          <p>
+            Здравейте и добре дошли в <q>Мед и какао</q>, мястото, където
+            мечтите се превръщат в <br />
+            неустоими десерти! Ние вярваме, че сладкишите не са просто храна –
+            те са споделени мигове,<br />
+            топли спомени и радост, които заслужават да бъдат отпразнувани.
+          </p>
+          <p>
+            При нас ще откриете десерти, създадени с много любов, внимание към
+            детайла и най-добрите<br />
+            съставки. Независимо дали търсите класическа шоколадова торта, свежи
+            плодове, които<br />
+            топят сърцето, или други сладки изненади, ние сме тук, за да
+            направим всеки<br />
+            момент по-сладък.
+          </p>
+          <p>
+            Нашата мисия е проста – да доставяме щастие до вашата врата. Всички
+            наши продукти се<br />
+            приготвят ръчно, с грижа и страст към изкуството на сладкарството.
+          </p>
+          <div class="login_register">
+            <% if (!currentUser) { %>
+            <a href="/views/login.ejs"><button>Вход</button></a>
+            <a href="/views/register.ejs"><button>Регистрация</button></a>
+            <% } else { %>
+            <button onclick="logout()" id="logout">Изход</button>
+            <% } %>
+          </div>
+        </div>
+
+        <section id="cakes_section"></section>
+      </article>
+    </main>
+
+    <footer id="footer">
+      <address>
+        <strong>Имейл:</strong>
+        <a href="mailto:honeycocoa@abv.bg" id="mail">honeycocoa@abv.bg</a><br />
+        <strong>Телефон:</strong> 0885478912<br />
+        <strong>Адрес:</strong> ул. Граф Игнатиев 25, 1000 София, България<br />
+      </address>
+    </footer>
+    <script src="/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="bg" id="admin">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Админ панел</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h1>Админ панел</h1>
+
+    <article id="first_two_sections">
+      <!-- Секция с поръчки -->
+      <section id="purchases">
+        <h2>Поръчки</h2>
+        <ol>
+          <% purchases.forEach(function(p) { %>
+          <li>
+            <p>Клиент: <%= p.customer?.username %></p>
+            <p>Адрес: <%= p.address %></p>
+            <p>Продукт: <%= p.productTitle %></p>
+            <p>Количество: <%= p.quantity || 0 %> бр.</p>
+            <p>Обща сума: <%= (p.price).toFixed(2) %> лв.</p>
+            <p>
+              Дата на поръчка: <%= new Date(p.date).toLocaleString('bg-BG', {
+              year: 'numeric', month: '2-digit', day: '2-digit', hour:
+              '2-digit', minute: '2-digit' }) %>
+            </p>
+            <br />
+          </li>
+          <% }); %>
+        </ol>
+      </section>
+
+      <!-- Секция с продукти -->
+      <section id="cakes_section">
+        <h2>Продукти</h2>
+        <div class="cakes-container">
+          <% products.forEach(product => { %>
+          <div class="cake_divs">
+            <div class="cake-image-wrapper">
+              <img
+                class="cakes"
+                src="<%= product.image %>"
+                alt="Торта: <%= product.title %>"
+              />
+              <form
+                class="delete-form"
+                method="POST"
+                action="/admin/products/<%= product._id %>?_method=DELETE"
+              >
+                <button type="submit" id="delete-btn">Изтрий</button>
+              </form>
+              <form
+                action="/admin/products/<%= product._id %>/edit"
+                method="GET"
+                style="display: inline"
+                id="edit"
+              >
+                <button type="submit" class="edit-btn">Редактирай</button>
+              </form>
+            </div>
+
+            <h3><%= product.title %></h3>
+            <p>
+              <strong>Цена:</strong> <%= parseFloat(product.price).toFixed(2) %>
+              лв.
+            </p>
+            <p>
+              <strong>Кратко описание:</strong><br /><br />
+              <%= product.shortDescription %>
+            </p>
+            <p><strong>Закупен:</strong> <%= product.purchaseCount %> пъти</p>
+          </div>
+          <% }) %>
+        </div>
+
+        <h2>Добави нов продукт</h2>
+        <form action="/admin/products" method="POST" id="add_product">
+          <label>Име:</label><br />
+          <input type="text" name="title" required /><br />
+
+          <label>Slug (уникален, за адрес):</label>
+          <input
+            type="text"
+            name="slug"
+            placeholder="примерен-продукт"
+            required
+          /><br />
+
+          <label>Автор:</label><br />
+          <input type="text" name="author" required /><br />
+
+          <label>Цена (лв.):</label><br />
+          <input type="number" step="0.01" name="price" required /><br />
+
+          <label>URL на снимка:</label><br />
+          <input type="text" name="image" required /><br />
+
+          <label>Кратко описание:</label><br />
+          <textarea name="shortDescription" rows="2" required></textarea><br />
+
+          <label>Подробно описание:</label><br />
+          <textarea name="fullDescription" rows="4" required></textarea><br />
+
+          <label>Ревю 1:</label><br />
+          <input type="text" name="reviews[]" required /><br />
+
+          <label>Ревю 2:</label><br />
+          <input type="text" name="reviews[]" required /><br />
+
+          <label>Ревю 3:</label><br />
+          <input type="text" name="reviews[]" required /><br />
+
+          <button type="submit">Добави</button>
+        </form>
+      </section>
+    </article>
+  </body>
+</html>

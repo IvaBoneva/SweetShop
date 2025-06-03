@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="bg">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="../public/style.css" />
+    <title>Червено кадифе</title>
+    <script defer src="../public/script.js"></script>
+  </head>
+  <body>
+    <header>
+      <img src="images/honey_transparent.gif" />
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Начало</a></li>
+        <li><a href="#wrapper_div">Описание</a></li>
+        <li><a href="#revues">Ревюта</a></li>
+        <li><a href="#forms">Поръчка / ревю</a></li>
+        <li><a href="#footer">Контакти</a></li>
+      </ul>
+    </nav>
+    <main>
+      <article>
+        <section>
+          <div id="wrapper_div">
+            <div class="cake">
+              <h2>Червено кадифе</h2>
+              <p>
+                <img
+                  class="pieces"
+                  src="images/redVelvet_cake.jpg"
+                  alt="Изображение на торта червено кадифе"
+                />
+              </p>
+            </div>
+            <div class="description">
+              <p><strong>Цена:</strong> 67.00 лв.</p>
+              <p>
+                <strong>Кратко описание:</strong><br /><br />
+                <q>Червено кадифе</q>е елегантна торта с меки червени блатове и
+                нежен крем от крема сирене –<br />
+                класика с неустоим вкус и стил.
+              </p>
+              <p>
+                <strong>Пълно описание:</strong><br /><br />
+                Тортата "Червено кадифе" е класически десерт, известен със
+                своята отличителна червена текстура<br />
+                и богат вкус. Тя се състои от няколко слоя пухкави, влажни
+                червени блатове, които са направени с<br />
+                какао на прах, мътеница, оцет и червена хранителна боя. Вкусът
+                на блата е леко какаов с мека<br />
+                киселинност, която се балансира идеално с кремообразната
+                глазура.
+              </p>
+              <p>
+                Обикновено тортата е покрита и слепена с крем от крема сирене,
+                който ѝ придава неустоимо мек<br />и леко сладък вкус с
+                деликатна киселинност. Глазурата е пухкава и богата,<br />
+                допълваща перфектно влажността на блатовете.
+              </p>
+              <p>
+                Червено кадифе е популярна за различни поводи като рождени дни,
+                сватби и празнични събития,<br />
+                заради своя впечатляващ вид и изискан вкус.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="revues">
+          <img src="images/image_no_bg.png" id="people" />
+          <div id="revues_div">
+            <div class="rev">
+              <p>
+                Тортата Червено кадифе беше просто божествена! Блатовете бяха
+                влажни и меки, а кремът от крема сирене – леко сладък с приятна
+                киселинност. Комбинацията беше идеално балансирана. Освен това
+                изглеждаше невероятно – истинско бижу на масата! Определено ще
+                поръчам отново!
+              </p>
+            </div>
+            <div class="rev">
+              <p>
+                Тортата беше наистина вкусна, с наситен червен цвят и страхотен
+                крем. Единствената ми забележка е, че блатовете можеха да бъдат
+                една идея по-влажни. Въпреки това, всички гости я харесаха и
+                свърши за минути! Ще я поръчам пак, но с надеждата да бъде още
+                по-сочна.
+              </p>
+            </div>
+            <div class="rev">
+              <p>
+                Опитвал съм много версии на тази торта, но тази беше истински
+                шедьовър! Кремът беше кадифено мек, а блатовете – пухкави и
+                перфектно изпечени. Не беше прекалено сладка, което я прави
+                идеална за хора, които не обичат натрапчиво сладки десерти.
+                Препоръчвам я на всеки!
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="forms">
+          <form action="" method="get" id="purchase_form">
+            <h3>Закупуване</h3>
+            <p>
+              <label for="name">Име (задължително):</label>
+              <input type="text" name="name" id="name" required />
+            </p>
+            <p>
+              <label for="address">Адрес (задължително):</label>
+              <input type="text" name="address" id="address" required />
+              <label for="quantity">Количество:</label><br />
+              <input
+                type="number"
+                id="quantity"
+                name="quantity"
+                min="1"
+                value="1"
+                required
+              /><br />
+            </p>
+            <p>
+              <button id="order">Поръчка</button>
+            </p>
+          </form>
+
+          <form action="" method="get" id="review_form">
+            <h3>Изпращане на ревю</h3>
+            <p>
+              <label for="comments">Коментар:</label>
+              <textarea
+                id="comments"
+                name="comments"
+                rows="5"
+                cols="33"
+              ></textarea>
+            </p>
+            <p>
+              <button id="send">Изпращане</button>
+            </p>
+          </form>
+        </section>
+      </article>
+    </main>
+
+    <footer id="footer">
+      <address>
+        <strong>Имейл:</strong>
+        <a href="mailto:honeycocoa@abv.bg" id="mail">honeycocoa@abv.bg</a><br />
+        <strong>Телефон:</strong> 0885478912<br />
+        <strong>Адрес:</strong> ул. Граф Игнатиев 25, 1000 София, България<br />
+      </address>
+    </footer>
+  </body>
+</html>

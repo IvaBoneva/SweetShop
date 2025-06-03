@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="bg">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="../public/style.css" />
+    <title>Плодова наслада</title>
+    <script defer src="../public/script.js"></script>
+  </head>
+  <body>
+    <header>
+      
+        <img src="images/honey_transparent.gif" />
+        
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Начало</a></li>
+        <li><a href="#wrapper_div">Описание</a></li>
+        <li><a href="#revues">Ревюта</a></li>
+        <li><a href="#forms">Поръчка / ревю</a></li>
+        <li><a href="#footer">Контакти</a></li>
+      </ul>
+    </nav>
+    <main>
+      <article>
+        <section>
+          <div id="wrapper_div">
+            <div class="cake">
+              <h2>Плодова наслада</h2>
+              <p>
+                <img
+                  class="pieces"
+                  src="images/fruit_cake.jpg"
+                  alt="Изображение на плодова торта"
+                />
+              </p>
+            </div>
+            <div class="description">
+          <p><strong>Цена:</strong> 52.00 лв.</p>
+          <p>
+            <strong>Кратко описание:</strong><br /><br />
+            <q>Плодова наслада</q> е свеж и лек десерт с нежни блатове, крем и
+            богатство от свежи сезонни плодове<br />
+            – перфектен баланс между сладост и натурална свежест!
+          </p>
+          <p>
+            <strong>Пълно описание:</strong><br /><br />
+            Тази плодова торта е двуслойна с пухкав жълт блат, който е гарниран с кремообразен пълнеж и<br />
+            декорация от свежи плодове. Горната част на тортата е богато украсена с цели ягоди, боровинки и<br />
+            малини, които добавят свежест и естествена сладост. Между двата блата има плодов конфитюр,<br />
+            който изглежда да е от боровинки или смесени горски плодове, придаващ на тортата богат и</br>
+            наситен вкус.
+          </p>
+          <p>
+            Блатовете са леки и въздушни, а кремът е гладък и пухкав, подчертаващ плодовите аромати.<br />
+            Декорацията е направена с внимание към детайла, като свежите плодове са подредени върху<br />
+            малки върхове от крем, създавайки елегантна визия. Тази торта е перфектен избор за летен<br/>
+            празник или специален повод.
+          </p>
+        </div>
+      </div>
+      
+        </section>
+       
+        <section id="revues">
+          <img src="images/image_no_bg.png" id="people"/>
+        <div id="revues_div">
+          <div class="rev">
+            <p>
+                Тази торта беше истински хит на рождения ми ден! Блатовете са невероятно меки и имат леко 
+                ванилов аромат, а кремът е толкова гладък и перфектно сладък. Най-доброто обаче е свежестта 
+                на плодовете – ягодите и боровинките бяха наистина пресни и сочни. Обичам как конфитюрът 
+                между слоевете добавя допълнителен вкус, който балансира всичко идеално. Силно препоръчвам 
+                за всеки повод!</p>
+            </div>
+            <div class="rev">
+            <p>
+                Тортата изглеждаше страхотно и беше идеална за семейната ни вечеря. Плодовете отгоре бяха
+                пресни, а кремът беше лек и не прекалено сладък, което много ми хареса. Единствената причина 
+                да не дам пълни 5 звезди е, че бих предпочела малко по-влажни блатове. Но като цяло, много 
+                вкусна и красива торта!</p>
+            </div>
+            <div class="rev">
+            <p>
+                Най-добрата плодова торта, която съм опитвал! Изглежда толкова елегантно и празнично – 
+                перфектна за фотосесия и още по-добра за хапване. Комбинацията от меки блатове, богат плодов 
+                конфитюр и свежи ягоди и боровинки е просто фантастична. Беше толкова лека, че си взех две 
+                парчета. Определено ще поръчам отново!
+              </p>
+            </div></div>
+        </section>
+        
+       
+        
+        <section id="forms">
+          <form action="" method="get" id="purchase_form">
+            <h3>Закупуване</h3>
+            <p>
+              <label for="name">Име (задължително):</label>
+              <input type="text" name="name" id="name"  required />
+            </p>
+            <p>
+              <label for="address">Адрес (задължително):</label>
+              <input type="text" name="address" id="address"  required />
+              <label for="quantity">Количество:</label><br>
+            <input type="number" id="quantity" name="quantity"   min="1" value="1" required><br>
+            </p>
+            <p>
+              <button id="order">Поръчка</button>
+            </p>
+          </form>
+
+          <form action="" method="get" id="review_form">
+            <h3>Изпращане на ревю</h3>
+            <p>
+              <label for="comments">Коментар:</label>
+              <textarea
+                id="comments"
+                name="comments"
+                rows="5"
+                cols="33"
+              ></textarea>
+            </p>
+            <p>
+              <button id="send">Изпращане</button>
+            </p>
+          </form>
+        </section>
+      </article>
+    </main>
+    
+    <footer id="footer">
+      <address>
+        <strong>Имейл:</strong> <a href="mailto:honeycocoa@abv.bg" id="mail">honeycocoa@abv.bg</a
+        ><br />
+        <strong>Телефон:</strong> 0885478912<br />
+        <strong>Адрес:</strong> ул. Граф Игнатиев 25, 1000 София, България<br />
+      </address>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="bg">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <form method="POST" action="/register" id="register_form">
+      <h3>Регистрация</h3>
+      <input
+        type="text"
+        name="username"
+        placeholder="Потребителско име"
+        required
+      />
+      <input type="email" name="email" placeholder="Имейл" required />
+      <input type="password" name="password" placeholder="Парола" required />
+      <button type="submit">Регистрация</button>
+      <p>Вече имаш акаунт? <a href="login.ejs">Вход</a></p>
+    </form>
+  </body>
+</html>
